@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bb_menu_mainpage"
+        android:icon="@drawable/selector_main_bottom_tab_first"
+        android:title="@string/vv_mainpage" />
+    <item
+        android:id="@+id/bb_menu_topic"
+        android:icon="@drawable/selector_main_bottom_tab_second"
+        android:title="@string/vv_find" />
+    <item
+        android:id="@+id/bb_menu_message"
+        android:icon="@drawable/selector_main_bottom_tab_third"
+        android:title="@string/vv_messsage" />
+    <item
+        android:id="@+id/bb_menu_mine"
+        android:icon="@drawable/selector_main_bottom_tab_forth"
+        android:title="@string/vv_mine" />
+
+
+
+</menu>
