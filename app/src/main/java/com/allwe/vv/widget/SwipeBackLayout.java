@@ -54,7 +54,7 @@ public class SwipeBackLayout extends FrameLayout {
 		mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
 		mScroller = new Scroller(context);
 
-		mShadowDrawable = getResources().getDrawable(R.drawable.shadow_left);//阴影部分
+		mShadowDrawable = getResources().getDrawable(R.mipmap.shadow_left);//阴影部分
 	}
 	
 	

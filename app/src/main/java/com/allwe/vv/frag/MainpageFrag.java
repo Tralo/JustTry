@@ -28,10 +28,11 @@ import com.allwe.vv.widget.TabPageIndicator;
 public class MainpageFrag extends Fragment {
 
 
-    @Bind(R.id.ti_tab_indicator)
-    TabPageIndicator ti_tab_indicator;
-    @Bind(R.id.vv_vp)
-    ViewPager vv_vp;
+    private View contentView;
+
+    private TabPageIndicator ti_tab_indicator;
+
+    private ViewPager vv_vp;
 
     public static MainpageFrag newInstance(Bundle args){
         MainpageFrag mainpageFrag = new MainpageFrag();
@@ -52,14 +53,18 @@ public class MainpageFrag extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View contentView =inflater.inflate(R.layout.frag_mainpage, container, false);
-        ButterKnife.bind(this,contentView);
+        contentView =inflater.inflate(R.layout.frag_mainpage, container, false);
+
         initView();
         return contentView;
 
     }
 
     private void initView() {
+        ti_tab_indicator = (TabPageIndicator) contentView.findViewById(R.id.ti_tab_indicator);
+        vv_vp = (ViewPager) contentView.findViewById(R.id.pager);
+
+
         MainPageAdapter adapter = new MainPageAdapter(((MainActivity)getActivity()).getSupportFragmentManager());
         adapter.addFragment(TabHotestFrag.newInstance(null),getString(R.string.vv_leastest));
         adapter.addFragment(TabLeastestFrag.newInstance(null),getString(R.string.vv_hotest));
