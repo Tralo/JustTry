@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:clickable="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 首页item -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/vv_user_img"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/ic_launcher"
+            app:border_color="@color/primary_light"
+            android:layout_centerHorizontal="true"
+            app:border_width="2dp"
+            />
+        <TextView
+            android:id="@+id/vv_user_name"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/vv_user_img"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            />
+
+        <TextView
+            android:id="@+id/vv_title"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/vv_user_img"
+            android:layout_alignParentRight="true"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#一起崩坏学园吧#"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            />
+
+        <include
+            android:id="@+id/danmaku_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/vv_title"
+            layout="@layout/danmaku_view"
+            />
+
+        <TextView
+            android:id="@+id/vv_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/danmaku_view"
+            />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
-    <com.allwe.vv.widget.TabPageIndicator
-        android:id="@+id/ti_tab_indicator"
+    <com.allwe.vv.widget.segmentcontrol.SegmentControl
+        android:id="@+id/sc_control"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
+        android:textSize="13sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        app:colors="#0099CC"
+        app:cornerRadius="5dip"
+        app:direction="horizon"
+        app:horizonGap="5dip"
+        app:texts="啊啊|啦啦啦|哈哈哈|顶顶顶顶"
+        app:verticalGap="8dip"
         />
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        />
-</LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_conent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sc_control" />
+</RelativeLayout>

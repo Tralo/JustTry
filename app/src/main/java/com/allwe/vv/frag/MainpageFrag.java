@@ -2,24 +2,16 @@ package com.allwe.vv.frag;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 import com.allwe.vv.R;
 import com.allwe.vv.aty.MainActivity;
-import com.allwe.vv.widget.TabPageIndicator;
+import com.allwe.vv.widget.segmentcontrol.SegmentControl;
 
 /**
  * 导航底部: 首页
@@ -27,12 +19,14 @@ import com.allwe.vv.widget.TabPageIndicator;
 
 public class MainpageFrag extends Fragment {
 
-
     private View contentView;
 
-    private TabPageIndicator ti_tab_indicator;
+    private SegmentControl sc_control;
 
-    private ViewPager vv_vp;
+    private int currentIndex = 0;
+    private List<Fragment> mFragments = new ArrayList<>();
+    private Fragment currentFrag;
+
 
     public static MainpageFrag newInstance(Bundle args){
         MainpageFrag mainpageFrag = new MainpageFrag();
@@ -54,47 +48,55 @@ public class MainpageFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         contentView =inflater.inflate(R.layout.frag_mainpage, container, false);
-
         initView();
+
+        changeTab(0);
         return contentView;
 
     }
 
     private void initView() {
-        ti_tab_indicator = (TabPageIndicator) contentView.findViewById(R.id.ti_tab_indicator);
-        vv_vp = (ViewPager) contentView.findViewById(R.id.pager);
+        sc_control = (SegmentControl) contentView.findViewById(R.id.sc_control);
+        sc_control.setText(getString(R.string.vv_leastest), getString(R.string.vv_hotest));
+        mFragments.add(TabLeastestFrag.newInstance(null));
+        mFragments.add(TabHotestFrag.newInstance(null));
 
-
-        MainPageAdapter adapter = new MainPageAdapter(((MainActivity)getActivity()).getSupportFragmentManager());
-        adapter.addFragment(TabHotestFrag.newInstance(null),getString(R.string.vv_leastest));
-        adapter.addFragment(TabLeastestFrag.newInstance(null),getString(R.string.vv_hotest));
-        vv_vp.setAdapter(adapter);
-        ti_tab_indicator.setViewPager(vv_vp);
+        sc_control.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
+            @Override
+            public void onSegmentControlClick(int index) {
+//                Toast.makeText(getActivity(),"切换位置:  " + index , Toast.LENGTH_SHORT).show();
+                changeTab(index);
+            }
+        });
 
     }
 
-    static class MainPageAdapter extends FragmentPagerAdapter {
-        private final List<Fragment> mFragments = new ArrayList<>();
-        private final List<String> mFragmentTitles = new ArrayList<>();
+    private void changeTab(int index) {
+        currentIndex = index;
 
-        public MainPageAdapter(FragmentManager fm) {
-            super(fm);
+
+        FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+        //判断当前的Fragment是否为空，不为空则隐藏
+        if (null != currentFrag) {
+            ft.hide(currentFrag);
         }
-        public void addFragment(Fragment fragment, String title) {
-            mFragments.add(fragment);
-            mFragmentTitles.add(title);
+        //先根据Tag从FragmentTransaction事物获取之前添加的Fragment
+        Fragment fragment = getChildFragmentManager().findFragmentByTag(mFragments.get(currentIndex).getClass().getName());
+
+        if (null == fragment) {
+            //如fragment为空，则之前未添加此Fragment。便从集合中取出
+            fragment = mFragments.get(index);
         }
-        @Override
-        public Fragment getItem(int position) {
-            return mFragments.get(position);
+        currentFrag = fragment;
+
+        //判断此Fragment是否已经添加到FragmentTransaction事物中
+        if (!fragment.isAdded()) {
+            ft.add(R.id.fl_conent, fragment, fragment.getClass().getName());
+        } else {
+            ft.show(fragment);
         }
-        @Override
-        public int getCount() {
-            return mFragments.size();
-        }
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitles.get(position);
-        }
+        ft.commit();
     }
+
+
 }
