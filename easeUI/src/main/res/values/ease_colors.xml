@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="btn_login_normal">#00acff</color>
+    <color name="btn_login_pressed">#46678d</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+    <color name="btn_register_normal">#ffffff</color>
+    <color name="btn_register_pressed">#00acff</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="common_bg">#fcfcfc</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="divider_list">#d4d4d4</color>
+    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_text_color_normal">#ffffff</color>
+    <color name="btn_white_normal">#f7f8f8</color>
+    <color name="btn_white_pressed">#b5b5b6</color>
+    <color name="btn_green_noraml">#68C270</color>
+    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_gray_pressed">#666667</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="orange">#FFA500</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="gray_normal">#666667</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="voip_interface_text_color">#bababa</color>
+    <color name="black_deep">#FF000000</color>
+    <color name="btn_answer_pressed">#4ebcd3</color>
+    <color name="btn_answer_normal">#2dafa3</color>
+	<color name="list_itease_secondary_color">#888888</color>
+	<color name="list_itease_primary_color">#000</color>
+	<color name="holo_blue_bright">#ff00ddff</color>
+	<color name="holo_green_light">#ff99cc00</color>
+	<color name="holo_orange_light">#ffffbb33</color>
+	<color name="holo_red_light">#ffff4444</color>
+	<color name="emojicon_tab_selected">#D9D9D9</color>
+    <color name="emojicon_tab_nomal">#ffffff</color>
+
+    <!-- BQMM_LIB -->
+    <color name="bqmm_background_tab_pressed">#6633B5E5</color>
+    <color name="bqmm_pop_bg">#eeffffff</color>
+    <color name="bqmm_transparent">#00000000</color>
+
+    <!-- 商店标题栏背景颜色 -->
+    <color name="bqmm_titlebar_bg">#ff2e2e2e</color>
+    <!-- 商店标题栏字体颜色 -->
+    <color name="bqmm_titletext_tc">#ffffffff</color>
+    <!-- 商店下载按钮字体颜色      下载前 -->
+    <color name="bqmm_download_button_text_color_download">#ff36cab6</color>
+    <!-- 商店下载按钮字体颜色      下载后 -->
+    <color name="bqmm_download_button_text_color_downloaded">#ffbcbcbc</color>
+    <!-- 商店下载按钮字体颜色       下载中 -->
+    <color name="bqmm_download_button_text_color_downloading">#ffffffff</color>
+    <!-- 商店下载按钮边框颜色       下载前 -->
+    <color name="bqmm_download_button_border_color_download">#ffbcbcbc</color>
+    <!-- 商店下载按钮边框颜色       下载后 -->
+    <color name="bqmm_download_button_border_color_downloaded">#ffbcbcbc</color>
+    <!-- 商店下载按钮背景颜色      下载前 -->
+    <color name="bqmm_download_button_background_color_download">#ffffffff</color>
+    <!-- 商店下载按钮背景颜色      下载后 -->
+    <color name="bqmm_download_button_background_color_downloaded">#ffffffff</color>
+
+
+    <!-- 商店移除按钮字体颜色 -->
+    <color name="bqmm_delete_button_text_color">#ffe98182</color>
+    <!-- 商店移除按钮边框颜色 -->
+    <color name="bqmm_delete_button_border_color">#ffbcbcbc</color>
+    <!-- 商店移除按背景框颜色 -->
+    <color name="bqmm_delete_button_background_color">#00000000</color>
+
+    <!-- 页面加载失败提示内容字体颜色 -->
+    <color name="bqmm_shop_network_error_text_color">#ffbcbcbc</color>
+    <!-- 键盘初始化失败提示内容字体颜色 -->
+    <color name="bqmm_keyboard_network_error_text_color">#ffbcbcbc</color>
+    <!-- 重新加载按钮边框颜色 -->
+    <color name="bqmm_reload_button_border_color">#ffbcbcbc</color>
+    <!-- 重新加载按钮内容颜色 -->
+    <color name="bqmm_reload_button_text_color">#ff36cab6</color>
+    <!-- 重新加载按钮背景颜色 -->
+    <color name="bqmm_reload_button_background_color">#ffffffff</color>
+    <!-- 点击刷新按钮内容颜色 -->
+    <color name="bqmm_refresh_button_text_color">#ff36cab6</color>
+    <!-- 点击刷新按钮背景颜色 -->
+    <color name="bqmm_refresh_button_background_color">#ffffffff</color>
+
+    <!-- 单表情详情页表情包加载失败提示内容颜色 -->
+    <color name="bqmm_failed_get_package_text_color">#ffbcbcbc</color>
+
+    <!-- 底部tab选中状态颜色 -->
+    <color name="bqmm_tab_selected_color">#33bcbcbc</color>
+    <!-- 底部tab栏背景颜色 -->
+    <color name="bqmm_tab_background_color">#ffffffff</color>
+    <!-- 表情键盘背景颜色 -->
+    <color name="bqmm_keyboard_background_color">#22bcbcbc</color>
+
+    <!-- 表情键盘商店按钮图案颜色 -->
+    <color name="bqmm_keyboard_shop_button_color">#ffffffff</color>
+    <!-- 表情键盘商店按钮背景颜色 -->
+    <color name="bqmm_keyboard_shop_button_background_color">#ff36cab6</color>
+
+    <!-- 默认大表情表情未下载覆盖层背景颜色 -->
+    <color name="bqmm_preload_covered_layout_background_color">#88000000</color>
+    <!-- 默认大表情包标题内容颜色 -->
+    <color name="bqmm_preload_package_name_text_color">#ffffffff</color>
+
+    <!-- 默认大表情下载按钮内容颜色    下载前 -->
+    <color name="bqmm_preload_button_text_color_download">#ffffffff</color>
+    <!-- 默认大表情下载按钮内容颜色    下载中 -->
+    <color name="bqmm_preload_button_text_color_downloading">#ffffffff</color>
+    <!-- 默认大表情下载按钮边框颜色 -->
+    <color name="bqmm_preload_button_border_color">#ffffffff</color>
+    <!-- 默认大表情下载进度条颜色 -->
+    <color name="bqmm_preload_button_progress_color">#ff36cab6</color>
+    <!-- 默认大表情下载按钮背景颜色 -->
+    <color name="bqmm_preload_button_background_color">#00000000</color>
+</resources>
